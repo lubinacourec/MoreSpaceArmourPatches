@@ -1,3 +1,5 @@
+# fuck this i give up. doesn't work. logs are useless. wasted far too long trying to make it work.
+
 ﻿# MoreSpaceArmourPatches
 SOS2 space armour patches for various mods
   - Altered Carbon 2: ReSleeved (Chrysalis/Hayabusa suits/helmets, envirosuit+helm)

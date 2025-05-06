@@ -53,7 +53,7 @@
       </value>
     </match>
   </Operation>
-  
+
   <!-- Armor VacuumSpeedMultiplier -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="RHApparel_Vector_UTIL1PowerArmor" OR defName="RHApparel_Prime_UTIL2PowerArmor" OR defName="RHApparel_Omicron_UTIL3PowerArmor" OR defName="RHApparel_Helix_UTIL4PowerArmor"]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
@@ -64,7 +64,7 @@
       </value>
     </match>
   </Operation>
-  
+
   <!-- Helmet DecompressionResistance -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="RHApparel_VectorHelmet_UTIL1PowerArmor" OR defName="RHApparel_PrimeHelmet_UTIL2PowerArmor" OR defName="RHApparel_OmicronHelmet_UTIL3PowerArmor" OR defName="RHApparel_HelixHelmet_UTIL4PowerArmor"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
