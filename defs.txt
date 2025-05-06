@@ -1,0 +1,26 @@
+DOOM
+
+defName="RHApparel_PraetorSuit_PowerArmor"
+defName="RHApparel_PraetorSuitHelmet_PowerArmor"
+
+Util
+
+defName="RHApparel_Vector_UTIL1PowerArmor" OR defName="RHApparel_Prime_UTIL2PowerArmor" OR defName="RHApparel_Omicron_UTIL3PowerArmor" OR defName="RHApparel_Helix_UTIL4PowerArmor"
+defName="RHApparel_VectorHelmet_UTIL1PowerArmor" OR defName="RHApparel_PrimeHelmet_UTIL2PowerArmor" OR defName="RHApparel_OmicronHelmet_UTIL3PowerArmor" OR defName="RHApparel_HelixHelmet_UTIL4PowerArmor"
+
+bounty hunter
+
+defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"
+defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"
+
+metal gear solid
+only body. didnt include other exo suit.
+defName="RHApparel_ExoSuit_Raiden"
+
+slave outfits
+only body
+defName="Apparel_SOU_SpTight"
+
+altered cabrone
+defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"
+defName="AC_EnviroSuitHelmet" defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"
