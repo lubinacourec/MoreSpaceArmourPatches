@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RH2 Bounty Hunters -->
+<Patch>
+  <!-- EVA description -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR ]/equippedStatOffsets[not(HypoxiaResistance)][not(comps)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"][not(comps)]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </operation>
+
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
+      <value>
+        <li>
+          <compClass>SaveOurShip2.CompEVA</compClass>
+        </li>
+      </value>
+    </match>
+  </operation>
+
+  <!-- EVA stats -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"][not(equippedStatOffsets)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor" OR defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"][not(equippedStatOffsets)]</xpath>
+      <value>
+        <equippedStatOffsets />
+      </value>
+    </match>
+  </operation>
+
+  <!-- Armor Cold insulation -->
+  <operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"]/statBases/Insulation_Cold</xpath>
+    <value>
+      <Insulation_Cold>100</Insulation_Cold>
+    </value>
+  </operation>
+
+  <!-- Armor DecompressionResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+      <value>
+        <DecompressionResistance>0.75</DecompressionResistance>
+      </value>
+    </match>
+  </operation>
+  
+  <!-- Armor VacuumSpeedMultiplier -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_Warden_BH1PowerArmor" OR defName="RHApparel_Justice_BH2PowerArmor" OR defName="RHApparel_Bloodhound_BH3PowerArmor" OR defName="RHApparel_Outlaw_BH4PowerArmor"]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
+      <value>
+        <VacuumSpeedMultiplier>2</VacuumSpeedMultiplier>
+      </value>
+    </match>
+  </operation>
+  
+  <!-- Helmet DecompressionResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+      <value>
+        <DecompressionResistance>0.25</DecompressionResistance>
+      </value>
+    </match>
+  </li>
+
+  <!-- Helmet HypoxiaResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="RHApparel_WardenHelmet_BH1PowerArmor" OR defName="RHApparel_JusticeHelmet_BH2PowerArmor" OR defName="RHApparel_BloodhoundHelmet_BH3PowerArmor" OR defName="RHApparel_OutlawHelmet_BH4PowerArmor"]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
+      <value>
+        <HypoxiaResistance>1</HypoxiaResistance>
+      </value>
+    </match>
+  </operation>
+</Patch>

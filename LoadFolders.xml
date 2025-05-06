@@ -1,0 +1,11 @@
+<loadFolders>
+	<v1.5>
+		<li>/</li>
+		<li IfModActive="rh.doom">Mods/rh.doom</li>
+		<li IfModActive="rh2.faction.utilitarian">Mods/rh2.faction.utilitarian</li>
+		<li IfModActive="rh2.faction.bounty.hunters">Mods/rh2.faction.bounty.hunters</li>
+		<li IfModActive="rh2.metal.gear.solid">Mods/rh2.metal.gear.solid</li>
+		<li IfModActive="usgiyi.slaveoutfits">Mods/usgiyi.slaveoutfits</li>
+		<li IfModActive="hlx.ultratechalteredcarbon">Mods/hlx.ultratechalteredcarbon</li>
+	</v1.5>
+</loadFolders>

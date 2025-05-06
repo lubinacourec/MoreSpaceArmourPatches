@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- altered cabrone -->
+<Patch>
+  <!-- EVA description -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR ]/equippedStatOffsets[not(HypoxiaResistance)][not(comps)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"][not(comps)]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </operation>
+
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
+      <value>
+        <li>
+          <compClass>SaveOurShip2.CompEVA</compClass>
+        </li>
+      </value>
+    </match>
+  </operation>
+
+  <!-- EVA stats -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"][not(equippedStatOffsets)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase" OR defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"][not(equippedStatOffsets)]</xpath>
+      <value>
+        <equippedStatOffsets />
+      </value>
+    </match>
+  </operation>
+
+  <!-- Armor Cold insulation -->
+  <operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"]/statBases/Insulation_Cold</xpath>
+    <value>
+      <Insulation_Cold>100</Insulation_Cold>
+    </value>
+  </operation>
+
+  <!-- Armor DecompressionResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+      <value>
+        <DecompressionResistance>0.75</DecompressionResistance>
+      </value>
+    </match>
+  </operation>
+  
+  <!-- Armor VacuumSpeedMultiplier -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuit" OR defName="AC_Apparel_HayabusaArmor" OR @ParentName="AC_ApparelArmorChrysalisMakeableBase"]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
+      <value>
+        <VacuumSpeedMultiplier>2</VacuumSpeedMultiplier>
+      </value>
+    </match>
+  </operation>
+  
+  <!-- Helmet DecompressionResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
+      <value>
+        <DecompressionResistance>0.25</DecompressionResistance>
+      </value>
+    </match>
+  </li>
+
+  <!-- Helmet HypoxiaResistance -->
+  <operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="AC_EnviroSuitHelmet" OR defName="AC_Apparel_HayabusaHelmet" OR @ParentName="AC_ApparelArmorHelmetChrysalisMakeableBase"]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
+      <value>
+        <HypoxiaResistance>1</HypoxiaResistance>
+      </value>
+    </match>
+  </operation>
+</Patch>
