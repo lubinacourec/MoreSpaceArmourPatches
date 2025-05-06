@@ -2,17 +2,17 @@
 <!-- MODNAME -->
 <Patch>
   <!-- EVA description -->
-  <operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[xxxxARMOURDEFS or ]/equippedStatOffsets[not(HypoxiaResistance)][not(comps)]</xpath>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS]/equippedStatOffsets[not(HypoxiaResistance)][not(comps)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS][not(comps)]</xpath>
       <value>
         <comps />
       </value>
     </match>
-  </operation>
+  </Operation>
 
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS]/comps[not(li/compClass="SaveOurShip2.CompEVA")]</xpath>
@@ -22,10 +22,10 @@
         </li>
       </value>
     </match>
-  </operation>
+  </Operation>
 
   <!-- EVA stats -->
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS][not(equippedStatOffsets)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxARMOURDEFS or xxxxHELMETDEFS][not(equippedStatOffsets)]</xpath>
@@ -33,18 +33,18 @@
         <equippedStatOffsets />
       </value>
     </match>
-  </operation>
+  </Operation>
 
   <!-- Armor Cold insulation -->
-  <operation Class="PatchOperationReplace">
+  <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[xxxxARMOURDEFS]/statBases/Insulation_Cold</xpath>
     <value>
       <Insulation_Cold>100</Insulation_Cold>
     </value>
-  </operation>
+  </Operation>
 
   <!-- Armor DecompressionResistance -->
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxARMOURDEFS]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxARMOURDEFS]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
@@ -52,10 +52,10 @@
         <DecompressionResistance>0.75</DecompressionResistance>
       </value>
     </match>
-  </operation>
+  </Operation>
   
   <!-- Armor VacuumSpeedMultiplier -->
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxARMOURDEFS]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxARMOURDEFS]/equippedStatOffsets[not(VacuumSpeedMultiplier)]</xpath>
@@ -63,10 +63,10 @@
         <VacuumSpeedMultiplier>2</VacuumSpeedMultiplier>
       </value>
     </match>
-  </operation>
+  </Operation>
   
   <!-- Helmet DecompressionResistance -->
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxHELMETDEFS]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxHELMETDEFS]/equippedStatOffsets[not(DecompressionResistance)]</xpath>
@@ -74,10 +74,10 @@
         <DecompressionResistance>0.25</DecompressionResistance>
       </value>
     </match>
-  </operation>
+  </Operation>
 
   <!-- Helmet HypoxiaResistance -->
-  <operation Class="PatchOperationConditional">
+  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[xxxxHELMETDEFS]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[xxxxHELMETDEFS]/equippedStatOffsets[not(HypoxiaResistance)]</xpath>
@@ -85,5 +85,5 @@
         <HypoxiaResistance>1</HypoxiaResistance>
       </value>
     </match>
-  </operation>
+  </Operation>
 </Patch>
